@@ -137,7 +137,7 @@ label view_tomatoes():
     "I remember how raw broccoli is basically a tiny tree, for better or worse..."
     return
 label check_tomatoes():
-    if f_tomatoes.xstart > 400: # TODO: update pos check
+    if f_tomatoes.xstart == 735:
         "Tomatoes the fruit in the fruit crisper drawer."
     else:
         "The controversial red item."
@@ -152,7 +152,7 @@ label fruit_tomatoes():
     "…"
     "nothing happened."
     "The tomatoes went into the fruit crisper drawer."
-    $ fridge.update(f_tomatoes.move())
+    $ fridge.update(f_tomatoes.move(xpos=735, ypos=1060))
     "Quite anti-climatic if I do say so myself."
     return
 label veg_tomatoes():
