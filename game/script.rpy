@@ -15,11 +15,12 @@
         f_chicken
     ])
 
-    scene kitchen
+    scene kitchen:
+        zoom 0.25 xpos 0 ypos 0
     "Oh? I think it's time to buy some more groceries."
     "But before that, I should check what's in my fridge!"
 
-    scene fridge
+    # scene block
     #show fridge(closed)
 
     #     pause 1.0
@@ -62,31 +63,36 @@
     
     Okay... What should I {b}Check{/b}?
     """
+    show screen kitchen(fridge)
     jump game_start
-    hide screen focus_dialogue
 
 # bananas
 label view_bananas():
     "A bunch of bananas."
     "I put them in the fridge a few days back as some were getting overripe."
     t "Bananas should typically be stored on counters, see further information at https://www.stopwaste.org/sites/default/files/StopWaste-FoodStorageGuide-2020.pdf"
+    return
 label check_bananas():
     "Oh boy, looks like these bananas have seen better days. Prolonged storage in the fridge made the banana skin all brown."
     "But upon closer inspection, some bananas are still firm but others are a little on the mushier side. Maybe I can use the mushy bananas to make some banana bread."
+    return
 label keep_bananas():
     "I remember fondly about my college roommate's banana bread, which was simple yet delicious."
     "Guess I should make some banana bread soon."
     "Nevertheless, seeing that I eat only one banana every few days, I should not buy a whole bunch of bananas going forward."
     "Note to self: buy less bananas at a time in the future."
+    return
 label toss_bananas():
     "I throw the bananas out (or put it in my compost or green waste bin if that's available in my area)."
     "Seeing that I eat only one banana every few days, I'm not going to buy bananas this time around."
     "Note to self: buy less bananas at a time in the future."
+    return
 
 # broccoli
 label view_broccoli():
     "A bunch of broccoli."
     "I remember how raw broccoli is basically a tiny tree, for better or worse..."
+    return
 label check_broccoli():
     "Hmmm… the broccoli is… {p} Wilted?"
     "Can broccoli even wilt?"
@@ -95,6 +101,7 @@ label check_broccoli():
     "Maybe use it for soup."
     "But just in case… I'll sprinkle some water on this guy to rehydrate."
     "No need to buy any other vegetables for now."
+    return
 
 # grapes
 label view_grapes():
@@ -103,16 +110,20 @@ label view_grapes():
     "Come to think of it, I guess the Greeks favored grapes over olives if Aristaeus was less prominent."
     "(Unless you rather compare Dionysus to Athena who created olive trees.)"
     "Actually, if I think more about it, grapes are like inverted olives."
+    return
 label check_grapes():
     "Gah! {p}Some of the grapes have mold. {p} And I don't like mold."
     "(Sorry Dionysus and grape farmer.)"
+    return
 label keep_grapes():
     "I separate the moldy grapes from the grapes that can fortunately still be saved{p} and put the loose grapes into a tupperware."
+    return
 label toss_grapes():
     "Just to be safe, I'll toss it out (or put it in my compost or green waste bin if that's available in my area)."
     "While I want to support farmers, maybe I should splurge less at the farmer's market."
     "Upon watching Life of a Strawberry I think about the Life of my Grapes and want to limit wasting effort and additional resources beyond just food."
     "If I want to buy any fruits, I need to cut back to make sure it's an amount I can consume."
+    return
 
 # tomatoes
 label view_tomatoes():
@@ -121,8 +132,9 @@ label view_tomatoes():
     "When they got ripe, I had to put them into the fridge."
     t "Tomatoes should typically be stored on counters, see further information at https://www.stopwaste.org/sites/default/files/StopWaste-FoodStorageGuide-2020.pdf"
     "I remember how raw broccoli is basically a tiny tree, for better or worse..."
+    return
 label check_tomatoes():
-    if f_tomatoes.xpos > 400: # TODO: update pos check
+    if f_tomatoes.xstart > 400: # TODO: update pos check
         "Tomatoes the fruit in the fruit crisper drawer."
     else:
         "The controversial red item."
@@ -131,6 +143,7 @@ label check_tomatoes():
         "At least that's what they argued in Nix v. Hedden against the Tariff of 1883."
         "In the end, I must choose."
         "I looked down into the fruits and vegetable crisper drawers…{p} Which crisper drawer should the tomatoes go into?"
+    return
 label fruit_tomatoes():
     "I slowly picked up the tomatoes and head down to the crisper drawers…{p}BUT THEN-"
     "…"
@@ -138,6 +151,7 @@ label fruit_tomatoes():
     "The tomatoes went into the fruit crisper drawer."
     $ fridge.update(f_tomatoes.move())
     "Quite anti-climatic if I do say so myself."
+    return
 label veg_tomatoes():
     "I slowly picked up the tomatoes and head down to the crisper drawers…{p} BUT THEN-"
     t "STOP"
@@ -146,25 +160,31 @@ label veg_tomatoes():
     t "And tomatoes are a fruit!"
     "I nodded promptly at the voice in my head."
     "The tomatoes went into the fruit drawer."
+    return
 
 # takeout
 label view_takeout():
     "Food I took home from the last time I ate out."
     "I forgot to bring my tupperware that day so it's in a takeout container instead."
+    return
 label check_takeout():
     "Looking in the container, food still looks good."
     "However it's an awkward amount (not enough for even half a meal)."
+    return
 label keep_takeout():
     "I'll probably eat this for lunch or dinner tomorrow with an additional side to make it a full meal.{p} (Or a late afternoon snack.)"
+    return
 label toss_takeout():
     "I throw the food away, thinking about how I'll be eating out with my friends this coming weekend."
     "I'll need to make sure I either portion the food out to 2 meals or order less."
+    return
 
 # eggs
 label view_eggs():
     "A carton of eggs."
     "I buy them on a fairly consistent basis."
     "I really like eggs, nothing else to say!"
+    return
 label check_eggs():
     "I open up the carton."
     "There are 2 eggs inside."
@@ -173,18 +193,22 @@ label check_eggs():
     "…"
     "…"
     "The two eggs is juuuuuuust low enough to be considered underwater."
+    return
 label keep_eggs():
     "Looks like the eggs are still good."
     "I'll buy another carton, but need to make sure I eat those two eggs first."
     "I scribble on the carton \"Eat this first!\" to make sure I don't forget again."
     "I'll also make sure to put the new carton below this carton so this doesn't get buried in my fridge again."
+    return
 label toss_eggs():
     "The eggs are almost rotten, which if I round up like I would in math, means it's rotten."
     "Going by \"feed yourself, feed others, feed the soil\", I'll feed this to one of my pets (if I have a pet)."
+    return
 
 # butter
 label view_butter():
     "A stick of refrigerated butter (unopened)."
+    return
 label check_butter():
     "Oooooh, looks like someone (Mr. Butter) has a fresh date~"
     "..."
@@ -192,6 +216,7 @@ label check_butter():
     "Nevertheless he looks and smells okay..."
     "Don't fret Mr. Butter!{p} You will not be ignored and tossed aside!"
     "Ideally I can include Mr. Butter in my next recipe."
+    return
 
 # milk
 label view_milk():
@@ -199,62 +224,80 @@ label view_milk():
     "Being lactose intolerant, I use this mostly for baking."
     "Though sometimes, right after I shower (and no one else is home), I chug a cool forbidden glass to live on the wild side."
     "(I may or may not have rushed to my Lactaid supply right after to make sure no trouble arises the next day.)"
+    return
 label check_milk():
     "Ah… It's been a while since I baked… Looks like the milk got sour."
     "But I heard sour milk can be used as a buttermilk substitute..."
+    return
 label keep_milk():
     "Alright time to bake away."
     "I'll still need some potable milk, but this time I'll opt for half a gallon or even a quart of milk."
+    return
 label toss_milk():
     "I pour the sour milk down the drain, and feel the slightest bit of remorse over what-if."
     "I'll still need some potable milk, but this time I'll opt for half a gallon or even a quart of milk instead."
+    return
 
 # cheese
 label view_cheese():
     "Some hardy (hearty?) cheese."
     "Tasty in, with, and on top of other foods."
+    return
 label check_cheese():
     "!!!"
     "I see…{p} some mold…{p} (shutters)"
+    return
 label keep_cheese():
     "In an effort to save the cheese, I did an Ecosia (or other search engine of your choice) search and find that mold doesn't spread as far in hard cheeses."
     "I cut off the moldy areas to toss, and put my cheese back to a safe place in the fridge."
+    return
 label toss_cheese():
     "Just to be safe, I'll toss it out (or put it in my compost or green waste bin if that's available in my area)."
+    return
 
 # ketchup
 label view_ketchup():
     "Tomato sauce."
     "But Americans call this tomato ketchup or catsup."
+    return
 label check_ketchup():
     "I bought a pretty big bottle a while back"
     "Seeing as I have barely put a dent, in retrospect this was more than I could handle."
     "It still looks good, I should use this in a recipe such as naporitan spaghetti or worst of the worst make my soup more tomato-y."
+    return
 
 # cake
 label view_cake():
     "Cake."
     "My latest bake-reation."
+    return
 label check_cake():
     "There’s still a few good slices left."
     "But I’m not sure if I’ll eat it all before it goes bad."
     "Better put some of it in the fridge to be safe."
+    return
 label keep_cake():
     "I keep it them all in the fridge."
+    return
 label freezer_cake():
     "To be safe, I put all but 2 slices into the freezer so they can stay fresh longer."
+    return
 
 # costco rotisserie chicken
 label view_chicken():
     "Some tasty cold rotisserie chicken in a container. I ate this with family a few days back, so most of it has been eaten."
+    return
 label check_chicken():
     "Just as I suspected, this {i}chicken{/i} is more bones than white meat, but this has only been in the fridge a few days."
     "Maybe I'll make some bone broth with the remains."
+    return
 label keep_chicken():
     "Still looks good. I'll need to buy more protein for dinner."
+    return
 label toss_chicken():
     "I throw the chicken out (or put it in my compost if that's available in my area)."
     "I'll need to buy more protein for dinner. Maybe a smaller chicken this time around to limit what I throw away."
+    return
  
 label game_end:
     "Seems like I {i}Checked{/i} everything I could in this fridge and am ready to go grocery shopping."

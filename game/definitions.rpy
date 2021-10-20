@@ -2,10 +2,14 @@
 define s = Character("Self")
 define t = Character("Tutorial/Narrator")
 
+# Images ----------------------------------------------------------------------
+init -1:
+    image kitchen = "/images/bg/fridge.png"
+
 # Food ------------------------------------------------------------------------
 init -1 python:
     class Food(store.object):
-        def __init__(self, key, name, image, page=0, xstart=0, ystart=0, actions={}, state=""):
+        def __init__(self, key, name, xstart=0, ystart=0, checked=False):
             self.key = key # key for image path and label jumping
             self.name = name # name of food for tooltips
             self.xstart = xstart # top left corner position of image
@@ -28,8 +32,8 @@ init -1 python:
     class Fridge(store.object):
         def __init__(self, items=[]):
             self.items = items
-        def toss(self, key):
-            self.items = [i for i in self.items if not (i.key == key)]
+        def toss(self, food):
+            self.items = [i for i in self.items if not (i.key == food.key)]
         def update(self, food):
             for i, itr in enumerate(self.items):
                 if itr.key == food.key:
@@ -40,7 +44,6 @@ init -1 python:
                     return False
             return True
 
-python:
     f_bananas = Food(
         key = "bananas",
         name = "Bunch of Bananas",

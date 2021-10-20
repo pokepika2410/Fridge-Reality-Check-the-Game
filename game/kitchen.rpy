@@ -8,55 +8,63 @@ label game_start():
 label food_navi(food):
     show screen focus_dialogue
     if not food.checked:
-        call expression "view_[food.key]"
+        call expression "view_{}".format(food.key)
         menu: 
-            Check:
+            "Check":
                 $ fridge.update(food.check())
-                call expression "check_[food.key]"
-            Leave it:
+                call expression "check_{}".format(food.key)
+            "Leave it":
                 "I'll check on this later."
     else:
-        call expression "check_[food.key]"
+        call expression "check_{}".format(food.key)
         if food.key not in ["broccoli", "butter", "ketchup"]:
             if food.key == "tomatoes":
                 menu: 
-                    Fruit:
-                        call expression "fruit_[food.key]"
-                    Vegetable:
-                        call expression "veg_[food.key]"
-            else if food.key == "cake":
+                    "Fruit":
+                        call expression "fruit_{}".format(food.key)
+                    "Vegetable":
+                        call expression "veg_{}".format(food.key)
+            elif food.key == "cake":
                 menu: 
-                    Keep:
-                        call expression "keep_[food.key]"
-                    Put in Freezer:
-                        call expression "freezer_[food.key]"
+                    "Keep":
+                        call expression "keep_{}".format(food.key)
+                    "Put in Freezer":
+                        call expression "freezer_{}".format(food.key)
             else:
                 menu:
-                    Keep:
-                        call expression "keep_[food.key]"
-                    Toss:
+                    "Keep":
+                        call expression "keep_{}".format(food.key)
+                    "Toss":
                         $ fridge.toss(food)
-                        call expression "toss_[food.key]"
+                        call expression "toss_{}".format(food.key)
     jump game_start
+
+# Transforms ------------------------------------------------------------------
+transform focus_effect:
+    on idle:
+        linear 0.15 yoffset 0
+    on hover:
+        ease 0.15 yoffset -15
 
 #--------------------------------------------------------------------------
 # KITCHEN SCREEN
 #--------------------------------------------------------------------------
-screen cooking(fridge):
-    zorder -10
-    add "/images/bg/kitchen.png"
+screen kitchen(fridge):
+    zorder 0
+    # add "/images/bg/fridge.png":
+    #     zoom 0.1 xpos 0 ypos 0
 
     # populate fridge
     for i in fridge.items:
         imagebutton:
-            idle "/images/food/{}.png".format(i.key)
-            xpos i.xstart
-            ypos i.ystart
+            idle Transform("/images/food/{}.png".format(i.key), zoom=0.25)
+            xpos i.xstart / 2
+            ypos i.ystart / 2
             tooltip i.name
-            alpha 0.5
             focus_mask True
             mouse "hover"
             action Call("food_navi", i)
+            at focus_effect
 
     $ tooltip = GetTooltip()
     if tooltip:
