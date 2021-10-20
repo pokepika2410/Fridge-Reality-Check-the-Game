@@ -163,6 +163,7 @@ label veg_tomatoes():
     t "And tomatoes are a fruit!"
     "I nodded promptly at the voice in my head."
     "The tomatoes went into the fruit drawer."
+    $ fridge.update(f_tomatoes.move(xpos=735, ypos=1060))
     return
 
 # takeout
