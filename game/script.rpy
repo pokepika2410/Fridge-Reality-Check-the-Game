@@ -1,4 +1,7 @@
-﻿label start:
+﻿init -1:
+    image kitchen = "/images/bg/fridge.png"
+
+label start:
     show screen focus_dialogue
     $fridge = Fridge([
         f_bananas,
@@ -16,7 +19,7 @@
     ])
 
     scene kitchen:
-        zoom 0.25 xpos 0 ypos 0
+        xpos 0 ypos 0
     "Oh? I think it's time to buy some more groceries."
     "But before that, I should check what's in my fridge!"
 
