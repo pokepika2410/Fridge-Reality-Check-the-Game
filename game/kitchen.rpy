@@ -12,31 +12,33 @@ label food_navi(food):
         menu: 
             "Check":
                 $ fridge.update(food.check())
-                call expression "check_{}".format(food.key)
+                call check_nav(food)
             "Leave it":
                 "I'll check on this later."
-    else:
-        call expression "check_{}".format(food.key)
-        if food.key not in ["broccoli", "butter", "ketchup"]:
-            if food.key == "tomatoes":
-                menu: 
-                    "Fruit":
-                        call expression "fruit_{}".format(food.key)
-                    "Vegetable":
-                        call expression "veg_{}".format(food.key)
-            elif food.key == "cake":
-                menu: 
-                    "Keep":
-                        call expression "keep_{}".format(food.key)
-                    "Put in Freezer":
-                        call expression "freezer_{}".format(food.key)
-            else:
-                menu:
-                    "Keep":
-                        call expression "keep_{}".format(food.key)
-                    "Toss":
-                        $ fridge.toss(food)
-                        call expression "toss_{}".format(food.key)
+    jump game_start
+
+label check_nav(food):
+    call expression "check_{}".format(food.key)
+    if food.key not in ["broccoli", "butter", "ketchup"]:
+        if food.key == "tomatoes":
+            menu: 
+                "Fruit":
+                    call expression "fruit_{}".format(food.key)
+                "Vegetable":
+                    call expression "veg_{}".format(food.key)
+        elif food.key == "cake":
+            menu: 
+                "Keep":
+                    call expression "keep_{}".format(food.key)
+                "Put in Freezer":
+                    call expression "freezer_{}".format(food.key)
+        else:
+            menu:
+                "Keep":
+                    call expression "keep_{}".format(food.key)
+                "Toss":
+                    $ fridge.toss(food)
+                    call expression "toss_{}".format(food.key)
     jump game_start
 
 # Transforms ------------------------------------------------------------------
