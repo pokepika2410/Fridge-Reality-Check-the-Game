@@ -62,7 +62,7 @@ screen kitchen(fridge):
             idle Transform("/images/food/{}.png".format(i.key), zoom=0.25)
             xpos i.xstart / 2
             ypos i.ystart / 2
-            tooltip i.name
+            tooltip i
             focus_mask True
             mouse "hover"
             action Call("food_navi", i)
@@ -75,10 +75,6 @@ screen kitchen(fridge):
                 xpos 600 ypos 745
                 xalign 0.5
                 color "#7c345e"
-            text "{size=24}[tooltip.tooltip]{/size}":
-                xpos 600 ypos 790
-                xalign 0.5
-                color "#483e54"
 
 screen focus_dialogue:
     zorder 0

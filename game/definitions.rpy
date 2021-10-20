@@ -3,7 +3,7 @@ define s = Character("Self")
 define t = Character("Tutorial/Narrator")
 
 # Images ----------------------------------------------------------------------
-init -1:
+init -10:
     image kitchen = "/images/bg/fridge.png"
 
 # Food ------------------------------------------------------------------------
