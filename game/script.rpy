@@ -307,7 +307,8 @@ label game_end:
 
     "Some parts I couldn't use anymore that I had to {b}Toss{/b} them away,{p}but hopefully with what I have left, I can whip up a few more things."
     "If I check my fridge right before I shop, I can make sure that I don't overbuy and have to {b}Toss{/b} it out in the future-{p}and save some money while I'm at it!"
-    "Time to get some groceries!"
+    "After I return, I can refer to the {a=https://stopfoodwaste.org/media/resources/StopFoodWaste-FridgeDemystified2020.pdf}Fridge Demystified{/a} on where to best put my foods away."
+    "Now it's time to get some groceries!"
 
     #entrance to kitchen
     t "Thanks for playing {b}Fridge Reality Check, the Game{/b}."
