@@ -29,7 +29,11 @@ define config.version = "1.0"
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""
+define gui.about = _p("""Ideas and Writing by Julia Peng, a sustainability enthusiast
+
+Art and Code Sorcery by sibling ShuttleFrog{p}(And shameless plug to play their other games {a=https://shuttlefrog.itch.io/}here{/a}!)
+
+Free Tips and Resources from {a=https://www.stopwaste.org/at-home/reduce-and-reuse/reduce-wasted-food-at-home}StopWaste{/a},{p}a public agency reducing waste in Alameda County, California
 """)
 
 

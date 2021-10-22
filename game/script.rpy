@@ -161,10 +161,10 @@ label view_takeout():
     return
 label check_takeout():
     "Looking in the container, food still looks good."
-    "However it's an awkward amount.{p}Not enough for even half a meal!"
+    "However it's an awkward amount-{p}Not enough for even half a meal!"
     return
 label keep_takeout():
-    "I'll probably eat this for lunch or dinner tomorrow stir fried with some vegetables{p}Or have it as a late afternoon snack if I'm feeling lazy."
+    "I'll probably eat this for lunch or dinner tomorrow stir fried with some vegetables,{p}Or have it as a late afternoon snack if I'm feeling lazy."
     return
 label toss_takeout():
     "I throw the food away, thinking about how I'll be eating out with my friends this coming weekend."
@@ -181,7 +181,7 @@ label check_eggs():
     "I open up the carton."
     "There are 2 eggs inside."
     "Ah yes… {i}those two…{/i}{p}I actually forgot about {i}those two{/i} for a few weeks now, going straight to newer cartons."
-    "Well, better late than never-{p}float test time!"
+    "Well, better late than never-{p}Float test time!"
     "…{p}…"
     "The two eggs are {i}juuuuuuust{/i} low enough to be considered underwater."
     return
@@ -236,7 +236,7 @@ label view_cheese():
     return
 label check_cheese():
     "!!!"
-    "I see…{p}some mold…{p}{i}(shutters){/i}"
+    "I see…{p}Some mold…{p}{i}(shutters){/i}"
     return
 label keep_cheese():
     "In an effort to save the cheese, I did an Ecosia (or other search engine of your choice) search and find that mold doesn't spread as far in hard cheeses."
@@ -280,7 +280,7 @@ label view_chicken():
     "I ate this with family a few days back, so most of it has been eaten."
     return
 label check_chicken():
-    "Just as I suspected, this \"chicken\" is more bones than white meat,{p}{i}but{/i} this has only been in the fridge a few days."
+    "Just as I suspected, this \"chicken\" is more bones than white meat,{p}{i}But{/i} this has only been in the fridge a few days."
     "Maybe I'll make some bone broth with the remains."
     return
 label keep_chicken():
