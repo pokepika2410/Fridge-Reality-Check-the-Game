@@ -1,41 +1,41 @@
-Thu Oct 21 23:20:05 2021
+Thu Oct 21 23:49:55 2021
 Windows-10-10.0.19041
 Ren'Py 7.4.9.2142
  
 
-Bootstrap to the start of init.init took 0.08s
+Bootstrap to the start of init.init took 0.10s
 Early init took 0.00s
 Loader init took 0.05s
-Loading error handling took 0.02s
+Loading error handling took 0.03s
 Loading script took 0.34s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.09s
-Loading analysis data took 0.02s
+Running init code took 0.08s
+Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\ASUS-frog\\AppData\\Roaming/RenPy/backups\\Fridge-Reality-Check-the-Game':
-Dump and make backups. took 0.09s
+Dump and make backups. took 0.08s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.02s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
+Creating interface object took 0.19s
 Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.01s
+Init translation took 0.03s
+Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.02s
+Analyze screens took 0.01s
 Save screen analysis took 0.03s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.03s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.12s
+Interface start took 0.09s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -47,184 +47,39 @@ Version: '4.6.0 NVIDIA 451.67'
 Display Info: None
 Screen sizes: virtual=(1280, 720) physical=(1538, 865) drawable=(1538, 865)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 9, in script
-    label food_navi(food):
-  File "renpy/ast.py", line 869, in execute
-    values = apply_arguments(self.parameters, renpy.store._args, renpy.store._kwargs)
-  File "renpy/ast.py", line 159, in apply_arguments
-    return parameters.apply(args, kwargs, ignore_errors)
-  File "renpy/ast.py", line 123, in apply
-    raise Exception("Required parameter %s has no value." % name)
-Exception: Required parameter food has no value.
-
-While running game code:
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 9, in script
-    label food_navi(food):
-Exception: Required parameter food has no value.
-
-Full traceback:
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 9, in script
-    label food_navi(food):
-  File "renpy/ast.py", line 869, in execute
-    values = apply_arguments(self.parameters, renpy.store._args, renpy.store._kwargs)
-  File "renpy/ast.py", line 159, in apply_arguments
-    return parameters.apply(args, kwargs, ignore_errors)
-  File "renpy/ast.py", line 123, in apply
-    raise Exception("Required parameter %s has no value." % name)
-Exception: Required parameter food has no value.
-
-While running game code:
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 7, in script call
-    $ renpy.pause(hard=True)
-  File "game/kitchen.rpy", line 9, in script
-    label food_navi(food):
-Exception: Required parameter food has no value.
 Resetting cache.
-Bootstrap to the start of init.init took 332.39s
+Bootstrap to the start of init.init took 43.69s
 Early init took 0.00s
 Loader init took 0.05s
 Loading error handling took 0.02s
-Loading script took 0.25s
-Loading save slot metadata. took 0.02s
+Loading script took 0.16s
+Loading save slot metadata. took 0.03s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.05s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\ASUS-frog\\AppData\\Roaming/RenPy/backups\\Fridge-Reality-Check-the-Game':
-Dump and make backups. took 0.08s
+Dump and make backups. took 0.07s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.03s
+Initial gc. took 0.02s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.19s
+Creating interface object took 0.16s
 Cleaning stores took 0.00s
-Init translation took 0.04s
+Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.03s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.04s
-Save bytecode. took 0.02s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.04s
+Interface start took 0.05s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -236,35 +91,28 @@ Version: '4.6.0 NVIDIA 451.67'
 Display Info: None
 Screen sizes: virtual=(1280, 720) physical=(1538, 865) drawable=(1538, 865)
 Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.01s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
 Resetting cache.
-Bootstrap to the start of init.init took 462.92s
+Bootstrap to the start of init.init took 78.22s
 Early init took 0.00s
 Loader init took 0.05s
 Loading error handling took 0.02s
-Loading script took 0.19s
+Loading script took 0.16s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.07s
+Running init code took 0.05s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\ASUS-frog\\AppData\\Roaming/RenPy/backups\\Fridge-Reality-Check-the-Game':
-Dump and make backups. took 0.08s
+Dump and make backups. took 0.07s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.03s
+Initial gc. took 0.02s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.20s
+Creating interface object took 0.17s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
@@ -272,373 +120,6 @@ Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.03s
 Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'GeForce GTX 1060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 451.67'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1538, 865) drawable=(1538, 865)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 524.50s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.02s
-Loading script took 0.20s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.06s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\ASUS-frog\\AppData\\Roaming/RenPy/backups\\Fridge-Reality-Check-the-Game':
-Dump and make backups. took 0.08s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.20s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.03s
-Prepare screens took 0.10s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.03s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'GeForce GTX 1060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 451.67'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1538, 865) drawable=(1538, 865)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 544.77s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.02s
-Loading script took 0.22s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.06s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\ASUS-frog\\AppData\\Roaming/RenPy/backups\\Fridge-Reality-Check-the-Game':
-Dump and make backups. took 0.08s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.19s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.03s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'GeForce GTX 1060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 451.67'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1538, 865) drawable=(1538, 865)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 554.36s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.02s
-Loading script took 0.22s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.07s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\ASUS-frog\\AppData\\Roaming/RenPy/backups\\Fridge-Reality-Check-the-Game':
-Dump and make backups. took 0.08s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.20s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.03s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'GeForce GTX 1060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 451.67'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1538, 865) drawable=(1538, 865)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 569.98s
-Early init took 0.00s
-Loader init took 0.06s
-Loading error handling took 0.02s
-Loading script took 0.21s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.06s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\ASUS-frog\\AppData\\Roaming/RenPy/backups\\Fridge-Reality-Check-the-Game':
-Dump and make backups. took 0.08s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.21s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.03s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'GeForce GTX 1060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 451.67'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1538, 865) drawable=(1538, 865)
-Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.01s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Resetting cache.
-Bootstrap to the start of init.init took 625.49s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.02s
-Loading script took 0.19s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\ASUS-frog\\AppData\\Roaming/RenPy/backups\\Fridge-Reality-Check-the-Game':
-Dump and make backups. took 0.07s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.22s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.03s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'GeForce GTX 1060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 451.67'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1538, 865) drawable=(1538, 865)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 699.09s
-Early init took 0.00s
-Loader init took 0.06s
-Loading error handling took 0.02s
-Loading script took 0.19s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\ASUS-frog\\AppData\\Roaming/RenPy/backups\\Fridge-Reality-Check-the-Game':
-Dump and make backups. took 0.08s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.20s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.05s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.05s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'GeForce GTX 1060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 451.67'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1538, 865) drawable=(1538, 865)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 794.50s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.02s
-Loading script took 0.18s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.06s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\ASUS-frog\\AppData\\Roaming/RenPy/backups\\Fridge-Reality-Check-the-Game':
-Dump and make backups. took 0.07s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.19s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.03s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'GeForce GTX 1060/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 451.67'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1538, 865) drawable=(1538, 865)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 854.56s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.02s
-Loading script took 0.18s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.06s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\ASUS-frog\\AppData\\Roaming/RenPy/backups\\Fridge-Reality-Check-the-Game':
-Dump and make backups. took 0.07s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.19s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.03s
-Prepare screens took 0.07s
 Save pyanalysis. took 0.03s
 Save bytecode. took 0.02s
 Running _start took 0.00s
@@ -655,10 +136,273 @@ Version: '4.6.0 NVIDIA 451.67'
 Display Info: None
 Screen sizes: virtual=(1280, 720) physical=(1538, 865) drawable=(1538, 865)
 Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 164.98s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.05s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\ASUS-frog\\AppData\\Roaming/RenPy/backups\\Fridge-Reality-Check-the-Game':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.18s
 Cleaning stores took 0.00s
-Init translation took 0.00s
+Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.04s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
 Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'GeForce GTX 1060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 451.67'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1538, 865) drawable=(1538, 865)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 176.24s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.05s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\ASUS-frog\\AppData\\Roaming/RenPy/backups\\Fridge-Reality-Check-the-Game':
+Dump and make backups. took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'GeForce GTX 1060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 451.67'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1538, 865) drawable=(1538, 865)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 184.41s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.05s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\ASUS-frog\\AppData\\Roaming/RenPy/backups\\Fridge-Reality-Check-the-Game':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.02s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'GeForce GTX 1060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 451.67'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1538, 865) drawable=(1538, 865)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 194.19s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.19s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.05s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\ASUS-frog\\AppData\\Roaming/RenPy/backups\\Fridge-Reality-Check-the-Game':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.18s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'GeForce GTX 1060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 451.67'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1538, 865) drawable=(1538, 865)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 208.65s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.05s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\ASUS-frog\\AppData\\Roaming/RenPy/backups\\Fridge-Reality-Check-the-Game':
+Dump and make backups. took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.20s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'GeForce GTX 1060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 451.67'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1538, 865) drawable=(1538, 865)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 260.06s
+Early init took 0.00s
+Loader init took 0.07s
+Loading error handling took 0.02s
+Loading script took 0.22s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.05s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\ASUS-frog\\AppData\\Roaming/RenPy/backups\\Fridge-Reality-Check-the-Game':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.19s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'GeForce GTX 1060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 451.67'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1538, 865) drawable=(1538, 865)
+Maximum texture size: 4096x4096

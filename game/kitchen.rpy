@@ -70,6 +70,16 @@ transform focus_effect:
 screen kitchen(fridge):
     zorder 0
 
+    # thermo
+    imagebutton:
+        idle "/images/food/thermo.png"
+        xpos 460
+        ypos 224
+        xanchor 0.5 yanchor 0.5
+        focus_mask True
+        action Jump("check_thermo")
+        at focus_effect
+
     # populate fridge
     for i in fridge.items:
         imagebutton:
@@ -77,19 +87,9 @@ screen kitchen(fridge):
             xpos i.xstart
             ypos i.ystart
             xanchor 0.5 yanchor 0.5
-            tooltip i
             focus_mask True
-            mouse "hover"
             action Call("food_navi", i)
             at focus_effect
-
-    $ tooltip = GetTooltip()
-    if tooltip:
-        fixed xmaximum 500 xoffset 50:
-            text "[tooltip.name]":
-                xpos 600 ypos 745
-                xalign 0.5
-                color "#7c345e"
 
 screen focus_dialogue:
     zorder 0

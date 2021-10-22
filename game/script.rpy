@@ -54,6 +54,12 @@
     show screen kitchen(fridge)
     jump game_start
 
+# thermo
+label check_thermo():
+    show screen focus_dialogue
+    "I made sure to set my fridge temperature lower than 40℉ (or 5℃) to ensure that I’m storing food safely."
+    jump game_start
+
 # bananas
 label view_bananas():
     "A bunch of bananas."
