@@ -98,8 +98,8 @@ label view_broccoli():
     "I think about how raw broccoli is basically a tiny tree, for better or worse..."
     return
 label check_broccoli():
-    "Hmmm… the broccoli is… {p}Wilted?"
-    "Can broccoli even wilt?"
+    "Hmmm… the broccoli is… {p}Shriveled?"
+    "Can broccoli even shrivel?"
     "It should be fine if it gets some water."
     "I'll put the broccoli back in the fridge."
     "Maybe use it for soup."
@@ -174,7 +174,7 @@ label check_takeout():
     "However it's an awkward amount.{p}Not enough for even half a meal!"
     return
 label keep_takeout():
-    "I'll probably eat this for lunch or dinner tomorrow with an additional side to make this more filling.{p}Or have it as a late afternoon snack."
+    "I'll probably eat this for lunch or dinner tomorrow stir fried with some vegetables{p}Or have it as a late afternoon snack if I'm feeling lazy."
     return
 label toss_takeout():
     "I throw the food away, thinking about how I'll be eating out with my friends this coming weekend."
@@ -312,7 +312,8 @@ label game_end:
 
     #entrance to kitchen
     t "Thanks for playing {b}Fridge Reality Check, the Game{/b}."
-    t "Hopefully this was fun and informational{p}and happy shopping!"
+    t "Hopefully this was fun and informational! Please fill out this {a=https://forms.gle/VkxmMCU77LYpq23Y6}Feedback Form{/a} to enter into a raffle drawing."
+    t "And if you want to do a real life fridge check, refer to the {a=https://www.stopwaste.org/resource/10-minute-fridge-reality-check}10-minute Fridge Reality Checklist{/a}.{p}Happy fridge check!"
     # This ends the game.
 
     return
