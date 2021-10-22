@@ -423,8 +423,6 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     if main_menu:
         add gui.main_menu_background
-    else:
-        add gui.game_menu_background
 
     frame:
         style "game_menu_outer_frame"
@@ -508,7 +506,7 @@ style game_menu_navigation_frame:
     yfill True
 
 style game_menu_content_frame:
-    left_margin 40
+    left_margin -200
     right_margin 20
     top_margin 10
 
@@ -614,7 +612,7 @@ screen file_slots(title):
                 style "page_label"
 
                 key_events True
-                xalign 0.5
+                xalign 0.35
                 action page_name_value.Toggle()
 
                 input:
@@ -625,7 +623,7 @@ screen file_slots(title):
             grid gui.file_slot_cols gui.file_slot_rows:
                 style_prefix "slot"
 
-                xalign 0.5
+                xalign 0.05
                 yalign 0.5
 
                 spacing gui.slot_spacing
@@ -653,7 +651,7 @@ screen file_slots(title):
             hbox:
                 style_prefix "page"
 
-                xalign 0.5
+                xalign 0.35
                 yalign 1.0
 
                 spacing gui.page_spacing

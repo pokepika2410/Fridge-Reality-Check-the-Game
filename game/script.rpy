@@ -1,7 +1,4 @@
-﻿init -1:
-    image kitchen = "/images/bg/fridge.png"
-
-label start:
+﻿label start:
     show screen focus_dialogue
     $fridge = Fridge([
         f_bananas,
@@ -18,31 +15,18 @@ label start:
         f_chicken
     ])
 
-    scene kitchen:
-        xpos 0 ypos 0
+    scene kitchen with dissolve
     "Oh?{p}I think it's time to buy some more groceries."
     "But before that, I should check what's in my fridge!"
 
-    # scene block
-    #show fridge(closed)
-
-    #     pause 1.0
-    # show outside:
-    #     xpos 0 ypos -1000
-    #     parallel:
-    #         xalign 0.5 yalign 1.0
-    #         linear 2.0 zoom 1.2
-    #     parallel:
-    #         linear 2.0 alpha 0.0
-    # pause 4.0
-    # $ show_quick_menu = True
-    # scene storefront with dissolve
+    show kitchenhalf with dissolve
+    show kitchenopen with dissolve
 
     t "Looking into your fridge?{p}Guess it's time for a Tutorial!"
-    #instructions about clicking around items
-    t "Let's see what we have here..."
 
-    #show fridge(opened, full of items)
+    t "Let's see what we have here..."
+    show screen kitchen(fridge) with dissolve
+
     t """
     Click on items in the fridge to look at what you have{p}and what items might have gone bad.
 
@@ -136,7 +120,7 @@ label view_tomatoes():
     t "Tomatoes should typically be stored on counters. For more information,  refer to the {a=https://www.stopwaste.org/sites/default/files/StopWaste-FoodStorageGuide-2020.pdf}Food Storage Guide{/a}."
     return
 label check_tomatoes():
-    if f_tomatoes.xstart == 735:
+    if f_tomatoes.xstart == 393:
         "Tomatoes the fruit in the fruit crisper drawer."
     else:
         "The controversial red item."
@@ -150,7 +134,7 @@ label fruit_tomatoes():
     "I slowly picked up the tomatoes and head down to the crisper drawers…{p}BUT THEN-"
     "…{p}nothing happened."
     "The tomatoes went into the fruit crisper drawer."
-    $ fridge.update(f_tomatoes.move(xpos=735, ypos=1060))
+    $ fridge.update(f_tomatoes.move(xpos=393, ypos=550))
     "Quite anti-climatic if I do say so myself."
     return
 label veg_tomatoes():
@@ -161,7 +145,7 @@ label veg_tomatoes():
     t "And tomatoes are a fruit!"
     "I nodded promptly at the voice in my head."
     "The tomatoes went into the fruit crisper drawer."
-    $ fridge.update(f_tomatoes.move(xpos=735, ypos=1060))
+    $ fridge.update(f_tomatoes.move(xpos=393, ypos=550))
     return
 
 # takeout
@@ -302,18 +286,18 @@ label toss_chicken():
     return
 
 label game_end:
+    hide screen kitchen with dissolve
+    scene fridge with dissolve
     "Seems like I {b}Checked{/b} everything I could in this fridge and am ready to go grocery shopping."
-    #fridge(closed)
 
     "Some parts I couldn't use anymore that I had to {b}Toss{/b} them away,{p}but hopefully with what I have left, I can whip up a few more things."
     "If I check my fridge right before I shop, I can make sure that I don't overbuy and have to {b}Toss{/b} it out in the future-{p}and save some money while I'm at it!"
     "After I return, I can refer to the {a=https://stopfoodwaste.org/media/resources/StopFoodWaste-FridgeDemystified2020.pdf}Fridge Demystified{/a} on where to best put my foods away."
     "Now it's time to get some groceries!"
 
-    #entrance to kitchen
     t "Thanks for playing {b}Fridge Reality Check, the Game{/b}."
     t "Hopefully this was fun and informational! Please fill out this {a=https://forms.gle/VkxmMCU77LYpq23Y6}Feedback Form{/a} to enter into a raffle drawing."
     t "And if you want to do a real life fridge check, refer to the {a=https://www.stopwaste.org/resource/10-minute-fridge-reality-check}10-minute Fridge Reality Checklist{/a}.{p}Happy fridge check!"
-    # This ends the game.
 
+    $ MainMenu(confirm=False)()
     return

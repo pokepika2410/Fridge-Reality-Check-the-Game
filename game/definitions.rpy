@@ -3,8 +3,11 @@ define s = Character("Self")
 define t = Character("Tutorial/Narrator")
 
 # Images ----------------------------------------------------------------------
-# init -999:
-#     image kitchen = "/images/bg/fridge.png"
+init -1:
+    image kitchen = "/images/bg/fridge.png"
+    image kitchenhalf = "/images/bg/fridge_half_open.png"
+    image kitchenopen = "/images/bg/fridge_open.png"
+    image kitchentitle = "/images/bg/title.png"
 
 # Food ------------------------------------------------------------------------
 init -1 python:
@@ -47,74 +50,62 @@ init -1 python:
     f_bananas = Food(
         key = "bananas",
         name = "Bunch of Bananas",
-        xstart=666, ystart=1117,
-        checked = False
+        xstart=360, ystart=586
     )
     f_broccoli = Food(
         key = "broccoli",
         name = "Broccoli",
-        xstart=1013, ystart=1120,
-        checked = False
+        xstart=508, ystart=587
     )
     f_grapes = Food(
         key = "grapes",
         name = "Bunch of Grapes",
-        xstart=775, ystart=1130,
-        checked = False
+        xstart=422, ystart=592
     )
     f_tomatoes = Food(
         key = "tomatoes",
         name = "Ripe Tomatoes",
-        xstart=875, ystart=544,
-        checked = False
+        xstart=403, ystart=290
     )
     f_takeout = Food(
         key = "takeout",
         name = "Takeout Box",
-        xstart=1029, ystart=521,
-        checked = False
+        xstart=532, ystart=285
     )
     f_eggs = Food(
         key = "eggs",
         name = "Carton of Eggs",
-        xstart=684, ystart=956,
-        checked = False
+        xstart=536, ystart=496
     )
     f_butter = Food(
         key = "butter",
         name = "Stick of Butter",
-        xstart=1625, ystart=648,
-        checked = False
+        xstart=825, ystart=332
     )
     f_milk = Food(
         key = "milk",
         name = "Gallon of Milk",
-        xstart=930, ystart=652,
-        checked = False
+        xstart=474, ystart=370
     )
     f_cheese = Food(
         key = "cheese",
         name = "Cheese",
-        xstart=404, ystart=501,
-        checked = False
+        xstart=555, ystart=390,
     )
     f_ketchup = Food(
         key = "ketchup",
         name = "Ketchup Bottle",
-        xstart=1405, ystart=714,
-        checked = False
+        xstart=717, ystart=400
     )
     f_cake = Food(
         key = "cake",
         name = "Slice of Cake",
-        xstart=404, ystart=501,
-        checked = False
+        xstart=381, ystart=388
     )
     f_chicken = Food(
         key = "chicken",
         name = "Costco Rotisserie Chicken",
-        xstart=404, ystart=501,
-        checked = False
+        xstart=388, ystart=483
     )
 
 

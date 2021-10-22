@@ -28,7 +28,7 @@ label check_nav(food):
     if food.key not in ["broccoli", "butter", "ketchup"]:
         show screen focus_menu
         if food.key == "tomatoes":
-            if f_tomatoes.xstart == 735:
+            if f_tomatoes.xstart == 393:
                 return
             menu: 
                 "Fruit":
@@ -44,6 +44,7 @@ label check_nav(food):
                     call expression "keep_{}".format(food.key)
                 "Put in Freezer":
                     hide screen focus_menu
+                    $ fridge.toss(food)
                     call expression "freezer_{}".format(food.key)
         else:
             menu:
@@ -59,24 +60,23 @@ label check_nav(food):
 # Transforms ------------------------------------------------------------------
 transform focus_effect:
     on idle:
-        linear 0.15 yoffset 0
+        linear 0.15 zoom 1
     on hover:
-        ease 0.15 yoffset -15
+        ease 0.15 zoom 1.2
 
 #--------------------------------------------------------------------------
 # KITCHEN SCREEN
 #--------------------------------------------------------------------------
 screen kitchen(fridge):
     zorder 0
-    # add "/images/bg/fridge.png":
-    #     zoom 0.1 xpos 0 ypos 0
 
     # populate fridge
     for i in fridge.items:
         imagebutton:
-            idle Transform("/images/food/{}.png".format(i.key), zoom=0.25)
-            xpos i.xstart / 2
-            ypos i.ystart / 2
+            idle "/images/food/{}.png".format(i.key)
+            xpos i.xstart
+            ypos i.ystart
+            xanchor 0.5 yanchor 0.5
             tooltip i
             focus_mask True
             mouse "hover"
