@@ -16,8 +16,13 @@
     ])
 
     scene kitchen with dissolve
-    "Oh?{p}I think it's time to buy some more groceries."
-    "But before that, I should check what's in my fridge!"
+
+    t "{i}Please to press space to continue dialog.{/i}"
+
+    """
+    Oh?{p}I think it's time to buy some more groceries.
+    But before that, I should check what's in my fridge!
+    """
 
     show kitchenhalf with dissolve
     show kitchenopen with dissolve
@@ -30,26 +35,28 @@
     t """
     Click on items in the fridge to look at what you have{p}and what items might have gone bad.
 
-    If an item went bad, feel free to {b}Toss{/b} them.
-
-    Though who knows?{p}{i}Maybe there is some other household uses for them.{/i}
-
     How can you tell if something went bad?{p}By clicking on {b}Check{/b}!
 
     After clicking on an item, you can {b}Check{/b} on the item- looking at the dates, having a sniff check, and looking at/in it.
 
     Afterwards, you can {b}Keep{/b} it in your fridge,{p}or {b}Toss{/b} the item out.
 
+    By default, you will {b}Keep{/b} an item.{p}If you think an item went bad, {b}Toss{/b} them.
+
+    Though who knows?{p}{i}Maybe there is some other household uses for them.{/i}
+
     If you decide to {b}Keep{/b} in the fridge, you can always {b}Check{/b} it again...{p}{i}and {b}Toss{/b} if you changed your mind{/i}.
 
-    However, once you {b}Toss{/b} an item out, it's gone for good!{p}So be careful when you {b}Toss{/b} items away.
+    For the full game experience, click {b}Check{/b} on an item, then {b}Keep{/b}, then click on the same item again to {b}Toss{/b}.
 
-    I think that's all as far as this Tutorial goes.
+    Remember! Once you {b}Toss{/b} an item out, it's gone for good!{p}So be careful when you {b}Toss{/b} items away.
+
+    I think that's everything as far as this Tutorial goes.
 
     Thanks for reading and have fun with {b}Fridge Reality Check,{/b}{p}{i} the Game{/i}!
     """
 
-    "Okay... What should I {b}Check{/b}?"
+    "Okay... Time to check my fridge items, but maybe I should {b}Check{/b} the thermostat before I forget."
 
     show screen kitchen(fridge)
     jump game_start
@@ -57,27 +64,31 @@
 # thermo
 label check_thermo():
     show screen focus_dialogue
-    "I made sure to set my fridge temperature lower than 40℉ (or 5℃) to ensure that I’m storing food safely."
+    "The fridge temperature has been set under 40℉ (or 5℃) to ensure that I’m storing food safely."
     jump game_start
 
 # bananas
 label view_bananas():
     "A bunch of bananas."
     "I put them in the fridge a few days back as some were getting overripe."
-    t "Bananas should typically be stored on counters, see further information in the {a=https://www.stopwaste.org/sites/default/files/StopWaste-FoodStorageGuide-2020.pdf}Food Storage Guide{/a}."
+    t """
+    Bananas should typically be stored on counters, due to being a tropical fruit sensitive to chilling.
+    Make sure to also keep them separate from other fruits, as their high ethylene speeds up ripening.
+    See further information in the {a=https://www.stopwaste.org/sites/default/files/StopWaste-FoodStorageGuide-2020.pdf}Food Storage Guide{/a}.
+    """
     return
 label check_bananas():
     "Oh boy, looks like these bananas have seen better days.{p}Prolonged storage in the fridge made the banana skin all brown."
-    "But upon closer inspection, some bananas are still firm,{p}but others are a little on the mushier side.{p}{i}Maybe I can use the mushy bananas to make some banana bread.{/i}"
+    "But upon closer inspection, some bananas are still firm,{p}but others are a little on the mushier side.{p}{i}Maybe I can use the mushy bananas to bake some banana bread.{/i}"
     return
 label keep_bananas():
-    "I remember fondly about my college roommate's banana bread, which was simple yet delicious."
+    "I remember fondly about my former roommate's banana bread, which was simple yet delicious."
     "Guess I should make some banana bread soon."
     "Nevertheless, seeing that I eat only one banana every few days, I should limit how many bananas I buy."
     "Note to self: buy less bananas at a time going forward."
     return
 label toss_bananas():
-    "I throw the bananas out (or into my compost or green waste bin)."
+    "I throw the bananas out (hopefully into compost or a green waste bin that accepts food scraps)."
     "Seeing that I eat only one banana every few days, I should limit how many bananas I buy."
     "Note to self: buy less bananas at a time going forward."
     return
@@ -85,24 +96,23 @@ label toss_bananas():
 # broccoli
 label view_broccoli():
     "A bunch of broccoli."
-    "I think about how raw broccoli is basically a tiny tree, for better or worse..."
+    "Raw broccoli is basically a tiny tree if I think about it..."
     return
 label check_broccoli():
-    "Hmmm… the broccoli is… {p}Shriveled?"
+    "Hmmm… the broccoli looks… {p}Shriveled?"
     "Can broccoli even shrivel?"
     "It should be fine if it gets some water."
     "I'll put the broccoli back in the fridge."
     "Maybe use it for soup."
     "But just in case… I'll also sprinkle some water on this guy to rehydrate."
-    "No need to buy any other vegetables for now."
+    "Note to self: No need to buy any other vegetables for now."
     return
 
 # grapes
 label view_grapes():
     "A bunch of grapes I bought from my local farmer's market."
     "I think about Dionysus when I look at purple grapes."
-    "Come to think of it, I guess the Greeks favored grapes over olives if Aristaeus was less prominent.{p}{i}Unless you rather compare Dionysus to Athena who created olive trees.{/i}"
-    "But also, don't grapes look like inverted olives?"
+    "Come to think of it, I guess the Greeks favored grapes over olives if Aristaeus (god of olives) was less prominent than Dionysus."
     return
 label check_grapes():
     "Gah!{p}Some of the grapes have mold.{p}And I don't like mold."
@@ -112,7 +122,7 @@ label keep_grapes():
     "I separate the moldy grapes from the ones that can still be saved and put the loose grapes into a tupperware."
     return
 label toss_grapes():
-    "Just to be safe, I'll toss it out (or into my compost or green waste bin if that's available in my area)."
+    "Just to be safe, I'll toss it out (hopefully into compost or a green waste bin that accepts food scraps)."
     "While I want to support farmers, maybe I should splurge less at the farmer's market."
     "Upon watching {a=https://www.youtube.com/watch?v=CLFOK4U34wI}Life of a Strawberry{/a} I think about the Life of my Grapes and want to limit wasting effort and additional resources beyond just food."
     "If I want to buy any fruits, I need to cut back to make sure it's an amount I can consume."
